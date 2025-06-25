@@ -332,7 +332,7 @@ class _MyCartScreenAfterPaymentState extends State<MyCartScreenAfterPayment> {
               mycartData[index].name!,
               mycartData[index].price!,
               mycartData[index].quantity,
-              mycartData[index].Size!),
+              mycartData[index].size!),
           index == mycartData.length - 1
               ? SizedBox()
               : getDivider(color: dividerColor, horPadding: 0),

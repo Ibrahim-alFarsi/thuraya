@@ -52,10 +52,11 @@ class _MyCartScreenState extends State<MyCartScreen> {
             builder: (plantDetailScreenController) => Column(
               children: [
                 Container(
-
                     color: regularWhite,
-                    child: getAppBar("My Cart",
-                        iconpermmition: false, )),
+                    child: getAppBar(
+                      "My Cart",
+                      iconpermmition: false,
+                    )),
                 getVerSpace(20.h),
                 Expanded(
                   flex: 1,
@@ -300,7 +301,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
                 mycartData[index].name!,
                 mycartData[index].price!,
                 mycartData[index].quantity,
-                mycartData[index].Size!),
+                mycartData[index].size!),
             index == mycartData.length - 1
                 ? SizedBox()
                 : getDivider(color: dividerColor, horPadding: 0),
