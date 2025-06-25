@@ -63,7 +63,6 @@ class HomeScreenController extends GetxController
 
   // @override
   // void onInit() {
-  //   // TODO: implement onInit
   //   tabController = TabController(length: 4, vsync: this);
   //   pController = PageController();
   //   super.onInit();
@@ -142,7 +141,6 @@ class PlantTypeScreenController extends GetxController
 
   @override
   void onInit() {
-    // TODO: implement onInit
     pController = PageController();
     super.onInit();
   }
@@ -260,7 +258,6 @@ class MyOrderScreenController extends GetxController
 
   @override
   void onInit() {
-    // TODO: implement onInit
     tabController = TabController(length: 2, vsync: this);
     pController = PageController();
     super.onInit();
