@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 
 class CardBottomSheet extends StatefulWidget {
   const CardBottomSheet({super.key});
@@ -32,7 +32,9 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                         borderRadius: BorderRadius.circular(10.h),
                         color: const Color(0XFF12121D)))),
             getVerSpace(15.h),
-            Center(child: getCustomFont("Add Card", 18.sp, Color(0XFF000000), 1,fontWeight: FontWeight.w700)),
+            Center(
+                child: getCustomFont("Add Card", 18.sp, Color(0XFF000000), 1,
+                    fontWeight: FontWeight.w700)),
             getVerSpace(20.h),
             Container(
                 decoration: BoxDecoration(
@@ -40,9 +42,9 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(-14, 8),
-                        color:
-                        Color(0XFF181414).withOpacity(0.08),
-                        blurRadius: 32,),
+                        color: Color(0XFF181414).withOpacity(0.08),
+                        blurRadius: 32,
+                      ),
                     ],
                     color: Colors.white),
                 child: getTextField(
@@ -56,9 +58,9 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(-14, 8),
-                        color:
-                        Color(0XFF181414).withOpacity(0.08),
-                        blurRadius: 32,),
+                        color: Color(0XFF181414).withOpacity(0.08),
+                        blurRadius: 32,
+                      ),
                     ],
                     color: Colors.white),
                 child: getTextField("Card Number")),
@@ -74,9 +76,9 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(-14, 8),
-                          color:
-                          Color(0XFF181414).withOpacity(0.08),
-                          blurRadius: 32,),
+                          color: Color(0XFF181414).withOpacity(0.08),
+                          blurRadius: 32,
+                        ),
                       ],
                       color: Colors.white),
                   child: Padding(
@@ -94,9 +96,9 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(-14, 8),
-                          color:
-                          Color(0XFF181414).withOpacity(0.08),
-                          blurRadius: 32,),
+                          color: Color(0XFF181414).withOpacity(0.08),
+                          blurRadius: 32,
+                        ),
                       ],
                       color: Colors.white),
                   child: Padding(
@@ -106,7 +108,7 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
               )
             ]),
             getVerSpace(20.5.h),
-            save_card_cheakbox(),
+            saveCardCheckBox(),
             getVerSpace(21.h),
             // add_button(),
             getCustomButton(
@@ -122,7 +124,7 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
     );
   }
 
-  Widget save_card_cheakbox() {
+  Widget saveCardCheckBox() {
     return Row(
       children: [
         Checkbox(

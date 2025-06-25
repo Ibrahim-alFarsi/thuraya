@@ -7,7 +7,7 @@ import '../../../controller/controller.dart';
 import '../../../datafile/model_data.dart';
 import '../../../model/blog_data_model.dart';
 import '../../../utils/color_category.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 import 'blog_detail_screen.dart';
 
 class BlogScreen extends StatefulWidget {
@@ -36,42 +36,42 @@ class _BlogScreenState extends State<BlogScreen> {
         },
         child: SafeArea(
           child: Scaffold(
-            backgroundColor: bgColor,
+              backgroundColor: bgColor,
               body: GetBuilder<BlogScreenController>(
-            init: BlogScreenController(),
-            builder: (blogScreenController) => Column(
-              children: [
-                Container(
-                    height: 73.h,
-                    width: double.infinity,
-                    color: bgColor,
-                    child: getAppBar("Blog", space: 140.h, function: () {
-                      Get.back();
-                    })),
-                getVerSpace(20.h),
-                Expanded(
-                    child: Container(
-                  color: regularWhite,
-                  child: FutureBuilder<bool>(
-                    future: _future,
-                    builder:
-                        (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                      if (snapshot.hasData) {
-                        return blogList();
-                      } else {
-                        return Shimmer.fromColors(
-                          baseColor: Colors.grey.withOpacity(0.14),
-                          highlightColor: bgColor,
-                          direction: ShimmerDirection.ltr,
-                          child: blogList(),
-                        );
-                      }
-                    },
-                  ).paddingOnly(bottom: 20.h),
-                ))
-              ],
-            ),
-          )
+                init: BlogScreenController(),
+                builder: (blogScreenController) => Column(
+                  children: [
+                    Container(
+                        height: 73.h,
+                        width: double.infinity,
+                        color: bgColor,
+                        child: getAppBar("Blog", space: 140.h, function: () {
+                          Get.back();
+                        })),
+                    getVerSpace(20.h),
+                    Expanded(
+                        child: Container(
+                      color: regularWhite,
+                      child: FutureBuilder<bool>(
+                        future: _future,
+                        builder: (BuildContext context,
+                            AsyncSnapshot<bool> snapshot) {
+                          if (snapshot.hasData) {
+                            return blogList();
+                          } else {
+                            return Shimmer.fromColors(
+                              baseColor: Colors.grey.withOpacity(0.14),
+                              highlightColor: bgColor,
+                              direction: ShimmerDirection.ltr,
+                              child: blogList(),
+                            );
+                          }
+                        },
+                      ).paddingOnly(bottom: 20.h),
+                    ))
+                  ],
+                ),
+              )
               //blogList()
               /* FutureBuilder<bool>(
               future: _future,

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/profile_screens/edit_profile_screen.dart';
 
 class MyProfile extends StatefulWidget {
@@ -46,7 +46,8 @@ class _MyProfileState extends State<MyProfile> {
                     child: Column(
                       children: [
                         getVerSpace(30.h),
-                        getAssetImage("profile.png", height: 100.h, width: 100.w),
+                        getAssetImage("profile.png",
+                            height: 100.h, width: 100.w),
                         getVerSpace(40.h),
                         getMyprofileDetailFormate(
                             "myprofileIcon.svg", "Name", "Darlene Robertson"),
@@ -66,7 +67,8 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 20.w, right: 20.w,bottom: 40.h),
+                  padding:
+                      EdgeInsets.only(left: 20.w, right: 20.w, bottom: 40.h),
                   child: getCustomButton("Edit Profile", () {
                     Get.to(EditProfileScreen());
                   }),

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/indoor_plant_data_model.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../utils/color_category.dart';

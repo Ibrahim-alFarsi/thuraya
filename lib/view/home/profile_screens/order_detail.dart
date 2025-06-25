@@ -6,7 +6,7 @@ import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/rate_types_modeol.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 
 class OrderDetailScreen extends StatefulWidget {
   const OrderDetailScreen({super.key});
@@ -102,16 +102,15 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                 fontWeight: FontWeight.w700),
                             getVerSpace(16.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
                                   children: [
                                     getAssetImage("profile.png",
                                         height: 55.h, width: 55.h),
                                     getHorSpace(14.h),
-                                    getCustomFont("Jennie Winget", 16.sp,
-                                        regularBlack, 1,
+                                    getCustomFont(
+                                        "Jennie Winget", 16.sp, regularBlack, 1,
                                         fontWeight: FontWeight.w700)
                                   ],
                                 ),
@@ -152,8 +151,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             getVerSpace(8.h),
                             getMultilineCustomFont(
                                 "I need the best one", 16.sp, regularBlack,
-                                fontWeight: FontWeight.w500,
-                                txtHeight: 1.5.h),
+                                fontWeight: FontWeight.w500, txtHeight: 1.5.h),
                             getVerSpace(20.h),
                             GestureDetector(
                                 onTap: () {
@@ -193,13 +191,12 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                                         width: 1.0.w,
                                                       ),
                                                       borderRadius:
-                                                          BorderRadius
-                                                              .circular(16.h),
+                                                          BorderRadius.circular(
+                                                              16.h),
                                                     ),
                                                   ),
                                                   getHorSpace(15.w),
-                                                  getCustomButton(
-                                                      "Yes", () {},
+                                                  getCustomButton("Yes", () {},
                                                       buttonwidth: 135.w,
                                                       buttonheight: 56.h),
                                                 ],
@@ -209,8 +206,8 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                         ),
                                       ));
                                 },
-                                child: getCustomFont("Cancel Order", 16.sp,
-                                    Color(0XFFFF3E3E), 1,
+                                child: getCustomFont(
+                                    "Cancel Order", 16.sp, Color(0XFFFF3E3E), 1,
                                     fontWeight: FontWeight.w700)),
                             getVerSpace(20.h),
                           ],
@@ -237,12 +234,11 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                     ).paddingAll(5.h)),
                                 getHorSpace(20.w),
                                 Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    getCustomFont("Cimmodo viv", 18.sp,
-                                        regularBlack, 10,
+                                    getCustomFont(
+                                        "Cimmodo viv", 18.sp, regularBlack, 10,
                                         fontWeight: FontWeight.w600),
                                     getVerSpace(6.h),
                                     Row(
@@ -273,8 +269,8 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                       ],
                                     ),
                                     getVerSpace(6.h),
-                                    getCustomFont("\$15.00", 14.sp,
-                                        Color(0XFF000000), 10,
+                                    getCustomFont(
+                                        "\$15.00", 14.sp, Color(0XFF000000), 10,
                                         fontWeight: FontWeight.w500),
                                   ],
                                 ),
@@ -290,14 +286,12 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                           children: [
                             getVerSpace(20.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 getCustomFont(
                                     "Item Price", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
-                                getCustomFont(
-                                    "\$41.00", 16.sp, regularBlack, 1,
+                                getCustomFont("\$41.00", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
                               ],
                             ),
@@ -305,14 +299,12 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             getDivider(color: dividerColor, horPadding: 0),
                             getVerSpace(8.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 getCustomFont(
                                     "Shipping", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
-                                getCustomFont(
-                                    "+\$3.00", 16.sp, regularBlack, 1,
+                                getCustomFont("+\$3.00", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
                               ],
                             ),
@@ -321,8 +313,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                               init: PlantDetailScreenController(),
                               builder: (plantDetailScreenController) =>
                                   ListView.builder(
-                                padding:
-                                    EdgeInsets.symmetric(horizontal: 20.h),
+                                padding: EdgeInsets.symmetric(horizontal: 20.h),
                                 shrinkWrap: true,
                                 primary: false,
                                 physics: BouncingScrollPhysics(),
@@ -355,18 +346,14 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                                           regularBlack,
                                                           1,
                                                           fontWeight:
-                                                              FontWeight
-                                                                  .w500),
+                                                              FontWeight.w500),
                                                       getRichtext(
                                                           " ( on order up to",
                                                           " \$20.00",
-                                                          firsttextSize:
-                                                              16.sp,
+                                                          firsttextSize: 16.sp,
                                                           firsttextcolor:
-                                                              Color(
-                                                                  0XFF808080),
-                                                          secondtextSize:
-                                                              16.sp,
+                                                              Color(0XFF808080),
+                                                          secondtextSize: 16.sp,
                                                           firstTextwidth:
                                                               FontWeight.w500,
                                                           secondTextwidth:
@@ -384,8 +371,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                                     ],
                                                   )
                                                 : getCustomFont(
-                                                    rateTypes[index]
-                                                        .rateName!,
+                                                    rateTypes[index].rateName!,
                                                     16.sp,
                                                     regularBlack,
                                                     1,
@@ -402,13 +388,11 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             getDivider(color: dividerColor, horPadding: 0),
                             getVerSpace(8.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 getCustomFont("Tax", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
-                                getCustomFont(
-                                    "+\$2.00", 16.sp, regularBlack, 1,
+                                getCustomFont("+\$2.00", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
                               ],
                             ),
@@ -416,14 +400,12 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             getDivider(color: dividerColor, horPadding: 0),
                             getVerSpace(8.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 getCustomFont(
                                     "Discount", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
-                                getCustomFont(
-                                    "-\$4.50", 16.sp, regularBlack, 1,
+                                getCustomFont("-\$4.50", 16.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w500),
                               ],
                             ),
@@ -431,13 +413,11 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                             getDivider(color: dividerColor, horPadding: 0),
                             getVerSpace(8.h),
                             Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 getCustomFont("Total", 18.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w600),
-                                getCustomFont(
-                                    "\$60.50", 18.sp, regularBlack, 1,
+                                getCustomFont("\$60.50", 18.sp, regularBlack, 1,
                                     fontWeight: FontWeight.w600),
                               ],
                             ),

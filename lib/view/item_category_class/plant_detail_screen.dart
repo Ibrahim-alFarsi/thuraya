@@ -6,7 +6,7 @@ import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/plant_detail_image_slider_model.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/cart_screens/my_cart_screen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shimmer/shimmer.dart';
@@ -225,8 +225,7 @@ class _PlantDetailState extends State<PlantDetail> {
                               fontWeight: FontWeight.w500),
                           Row(
                             children: [
-                              getadd_remove_button("add_icon.svg",
-                                  function: () {
+                              getAddRemoveButton("add_icon.svg", function: () {
                                 plantDetailScreenController
                                     .onQuntityIncrese(widget.detail.quntity);
                               }),
@@ -236,7 +235,7 @@ class _PlantDetailState extends State<PlantDetail> {
                                   fontWeight: FontWeight.w500),
                               getHorSpace(20.h),
                               plantDetailScreenController.qu > 1
-                                  ? getadd_remove_button("remove_icon.svg",
+                                  ? getAddRemoveButton("remove_icon.svg",
                                       function: () {
                                       plantDetailScreenController
                                           .onQuntityDicrese(

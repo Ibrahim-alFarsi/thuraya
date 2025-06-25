@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 
 class HelpCenterScreen extends StatefulWidget {
   const HelpCenterScreen({super.key});
@@ -19,7 +19,8 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
     return Scaffold(
         backgroundColor: regularWhite,
         body: SafeArea(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               color: regularWhite,
               child: getAppBar("Help Center", space: 115.w, function: () {
@@ -38,9 +39,8 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         getVerSpace(16.h),
                         answer(
                             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
-
                       ],
-                    ).paddingSymmetric(horizontal: 20.h,vertical: 20.h),
+                    ).paddingSymmetric(horizontal: 20.h, vertical: 20.h),
                   ).paddingSymmetric(vertical: 10.h),
                   Container(
                     color: regularWhite,
@@ -52,7 +52,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         answer(
                             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
                       ],
-                    ).paddingSymmetric(horizontal: 20.h,vertical: 20.h),
+                    ).paddingSymmetric(horizontal: 20.h, vertical: 20.h),
                   ).paddingSymmetric(vertical: 10.h),
                   Container(
                     color: regularWhite,
@@ -64,7 +64,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         answer(
                             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
                       ],
-                    ).paddingSymmetric(horizontal: 20.h,vertical: 20.h),
+                    ).paddingSymmetric(horizontal: 20.h, vertical: 20.h),
                   ).paddingSymmetric(vertical: 10.h),
                 ],
               ),

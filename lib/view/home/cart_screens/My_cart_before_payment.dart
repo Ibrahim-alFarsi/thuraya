@@ -11,7 +11,7 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../utils/color_category.dart';
 import '../../../utils/constant.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class MyCartScreenAfterPayment extends StatefulWidget {
   const MyCartScreenAfterPayment({super.key});

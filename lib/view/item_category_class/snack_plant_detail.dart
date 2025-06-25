@@ -7,7 +7,7 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/cart_screens/my_cart_screen.dart';
 import '../../model/plant_product.dart';
 
@@ -129,7 +129,7 @@ class _SnackPlantDetailState extends State<SnackPlantDetail> {
                               padding: EdgeInsets.symmetric(horizontal: 20.w),
                               child: Row(
                                 children: [
-                                  getadd_remove_button("addicon.png",
+                                  getAddRemoveButton("addicon.png",
                                       function: () {
                                     plantDetailScreenController
                                         .onQuntityIncrese(
@@ -146,7 +146,7 @@ class _SnackPlantDetailState extends State<SnackPlantDetail> {
                                       fontWeight: FontWeight.w500),
                                   getHorSpace(20.h),
                                   plantDetailScreenController.qu > 1
-                                      ? getadd_remove_button("removeicon.png",
+                                      ? getAddRemoveButton("removeicon.png",
                                           function: () {
                                           plantDetailScreenController
                                               .onQuntityDicrese(

@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/profile_screens/my_orders.dart';
 
 class OrderConfirm extends StatefulWidget {

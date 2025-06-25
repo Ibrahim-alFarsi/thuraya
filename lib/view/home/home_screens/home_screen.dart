@@ -7,7 +7,7 @@ import 'package:thuraya_app/model/blog_data_model.dart';
 import 'package:thuraya_app/model/popular_plant.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/home_screens/popular_plant_grid.dart';
 import 'package:thuraya_app/view/home/home_screens/serch_filter_sheet.dart';
 import 'package:thuraya_app/view/home/profile_screens/notification%20_scrern.dart';
@@ -134,7 +134,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 onTap: () {},
                                 child: getCustomContainer(36.h, 109.h,
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(16.h),
+                                        borderRadius:
+                                            BorderRadius.circular(16.h),
                                         color: regularWhite),
                                     child: Center(
                                       child: getCustomFont(
@@ -151,7 +152,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               getVerSpace(20.h),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   getCustomFont(
                                       "Plant Type", 20.sp, Color(0XFF000000), 1,
@@ -170,10 +172,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               getVerSpace(14.h),
                               getTabBar(_tabController, _pController, [
                                 Container(
-                                  child: const Tab(
-                                    text: "All ",
-                                  ).paddingSymmetric(horizontal: 10.h)
-                                ),
+                                    child: const Tab(
+                                  text: "All ",
+                                ).paddingSymmetric(horizontal: 10.h)),
                                 const Tab(
                                   text: "Outdoors",
                                 ),
@@ -190,7 +191,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   controller: _pController,
                                   onPageChanged: (value) {
                                     _tabController.animateTo(value,
-                                        duration: const Duration(milliseconds: 300),
+                                        duration:
+                                            const Duration(milliseconds: 300),
                                         curve: Curves.ease);
                                   },
                                   itemCount: itemCtegoryClass.length,
@@ -208,10 +210,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               getVerSpace(20.h),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  getCustomFont(
-                                      "Popular Plants", 20.sp, Color(0XFF000000), 1,
+                                  getCustomFont("Popular Plants", 20.sp,
+                                      Color(0XFF000000), 1,
                                       fontWeight: FontWeight.w700,
                                       txtHeight: 1.5.h),
                                   GestureDetector(
@@ -238,8 +241,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                getCustomFont("Blog", 20.sp, Color(0XFF000000), 1,
-                                    fontWeight: FontWeight.w700, txtHeight: 1.5.h),
+                                getCustomFont(
+                                    "Blog", 20.sp, Color(0XFF000000), 1,
+                                    fontWeight: FontWeight.w700,
+                                    txtHeight: 1.5.h),
                                 GestureDetector(
                                     onTap: () {
                                       Get.to(BlogScreen());

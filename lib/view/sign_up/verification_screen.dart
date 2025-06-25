@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/sign_up/verification_success_screen.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -45,7 +45,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 ),
               ),
               getVerSpace(40.h),
-              getCustomFont("Verification", 28.sp, regularBlack, 1,fontWeight: FontWeight.w700),
+              getCustomFont("Verification", 28.sp, regularBlack, 1,
+                  fontWeight: FontWeight.w700),
               getVerSpace(30.h),
               getOTPfield(otpkey),
               getVerSpace(50.h),

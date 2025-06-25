@@ -6,7 +6,7 @@ import 'package:thuraya_app/model/notification_data.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
 import 'package:shimmer/shimmer.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
@@ -16,11 +16,11 @@ class NotificationScreen extends StatefulWidget {
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
-  List<NotiFicationData>  notificationData = Data.getNotiFicationData();
+  List<NotiFicationData> notificationData = Data.getNotiFicationData();
 
   final Future<bool> _future = Future<bool>.delayed(
     Duration(milliseconds: 400),
-        () {
+    () {
       return true;
     },
   );
@@ -34,27 +34,26 @@ class _NotificationScreenState extends State<NotificationScreen> {
       child: Scaffold(
         backgroundColor: regularWhite,
         body: SafeArea(
-          child:  FutureBuilder<bool>(
-            future: _future,
-            builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-              if (snapshot.hasData) {
-                return  column();
-              } else {
-                return Shimmer.fromColors(
-                  baseColor: Colors.grey.withOpacity(0.14),
-                  highlightColor: bgColor,
-                  direction: ShimmerDirection.ltr,
-                  child:  column(),
-                );
-              }
-            },
-          )
-        ),
+            child: FutureBuilder<bool>(
+          future: _future,
+          builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+            if (snapshot.hasData) {
+              return column();
+            } else {
+              return Shimmer.fromColors(
+                baseColor: Colors.grey.withOpacity(0.14),
+                highlightColor: bgColor,
+                direction: ShimmerDirection.ltr,
+                child: column(),
+              );
+            }
+          },
+        )),
       ),
     );
   }
 
-  Widget column(){
+  Widget column() {
     return Column(
       children: [
         Container(
@@ -66,15 +65,19 @@ class _NotificationScreenState extends State<NotificationScreen> {
         getVerSpace(10.h),
         Expanded(
             child: ListView(
-              children: [
-                ListView.builder(shrinkWrap: true,
-                  primary: false,
-                  physics: BouncingScrollPhysics(),itemCount: notificationData.length,itemBuilder: (context, index) =>   getNotificationFormate(
-                      index+1,notificationData[index].messege!, notificationData[index].time!),)
-
-
-              ],
-            )),
+          children: [
+            ListView.builder(
+              shrinkWrap: true,
+              primary: false,
+              physics: BouncingScrollPhysics(),
+              itemCount: notificationData.length,
+              itemBuilder: (context, index) => getNotificationFormate(
+                  index + 1,
+                  notificationData[index].messege!,
+                  notificationData[index].time!),
+            )
+          ],
+        )),
         getVerSpace(30.h)
       ],
     );

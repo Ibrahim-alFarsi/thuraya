@@ -5,7 +5,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import '../../../datafile/model_data.dart';
 import '../../../model/address.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class AddAddressScreen extends StatefulWidget {
   const AddAddressScreen({super.key});

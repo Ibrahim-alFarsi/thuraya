@@ -6,7 +6,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/popular_plant.dart';
 import 'package:thuraya_app/utils/color_category.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/item_category_class/plant_detail_screen.dart';
 
 class FavouriteItemScreen extends StatefulWidget {
@@ -33,7 +33,6 @@ class _FavouriteItemScreenState extends State<FavouriteItemScreen> {
               builder: (popularPlantData) => Column(
                 children: [
                   Container(
-
                       width: double.infinity,
                       color: regularWhite,
                       child: getAppBar("Favourites",
@@ -89,8 +88,9 @@ class _FavouriteItemScreenState extends State<FavouriteItemScreen> {
                                             alignment: Alignment.topRight,
                                             child: GestureDetector(
                                                 onTap: () {
-                                                  popularPlantData.onLikePosition(
-                                                      popularPlant[index]);
+                                                  popularPlantData
+                                                      .onLikePosition(
+                                                          popularPlant[index]);
                                                 },
                                                 child: popularPlant[index]
                                                         .initialvalue
@@ -105,8 +105,8 @@ class _FavouriteItemScreenState extends State<FavouriteItemScreen> {
                                                             height: 20.h,
                                                             width: 20.h)
                                                         .paddingOnly(
-                                                    right: 12,
-                                                    top: 12.h)),
+                                                            right: 12,
+                                                            top: 12.h)),
                                           )
                                         ],
                                       ),

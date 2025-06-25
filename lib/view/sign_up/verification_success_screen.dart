@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/utils/pref_data.dart';
 import 'package:thuraya_app/view/home/home_main_screen.dart';
 
@@ -18,10 +18,9 @@ class _VerificationSuccessScreenState extends State<VerificationSuccessScreen> {
   @override
   Widget build(BuildContext context) {
     initializeScreenSize(context);
-    return WillPopScope(
-        onWillPop: () {
-          return Future.value(true);
-        },
+    return PopScope(
+        canPop: true,
+        onPopInvokedWithResult: (didPop, result) {},
         child: Scaffold(
           backgroundColor: Color(0XFFE5E5E5),
           body: SafeArea(

@@ -19,6 +19,7 @@ Widget getAssetImage(String image,
   return Image.asset(
     Constant.assetImagePath + image,
     color: color,
+    colorBlendMode: color != null ? BlendMode.srcIn : null,
     width: width,
     height: height,
     fit: boxFit,
@@ -32,7 +33,8 @@ Widget getSvgImage(String image,
     BoxFit boxFit = BoxFit.contain}) {
   return SvgPicture.asset(
     Constant.assetImagePath + image,
-    color: color,
+    colorFilter:
+        color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
     width: width,
     height: height,
     fit: boxFit,
@@ -161,7 +163,7 @@ Widget getTextField(String hinttext,
       boxShadow: [
         BoxShadow(
             offset: Offset(0, 4),
-            color: regularBlack.withOpacity(0.03),
+            color: regularBlack.withAlpha((0.03 * 255).toInt()),
             blurRadius: 16),
       ],
     ),
@@ -218,7 +220,7 @@ Widget getGoogleFacebookButton(String image, String text,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: Colors.grey.withOpacity(0.1)),
+          color: Colors.grey.withAlpha((0.1 * 255).toInt())),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -316,7 +318,6 @@ Widget getAppBar(String text,
     double? space,
     bool iconpermmition = true}) {
   return Container(
-
     color: color,
     child: Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -329,8 +330,9 @@ Widget getAppBar(String text,
               child: iconpermmition
                   ? getSvgImage("arrow_square_left.svg",
                       height: 24.h, width: 24.w)
-                  : SizedBox(width: 24,)),
-        
+                  : SizedBox(
+                      width: 24,
+                    )),
           Expanded(
             child: getCustomFont(text, 22.sp, Color(0XFF000000), 1,
                 fontWeight: FontWeight.w700, textAlign: TextAlign.center),
@@ -602,7 +604,7 @@ Widget getCustomContainer(double? height, double? width,
   );
 }
 
-Widget getadd_remove_button(String? image,
+Widget getAddRemoveButton(String? image,
     {Function? function,
     double? height,
     double? width,
@@ -721,7 +723,7 @@ Widget getCartDetailFormate(String productImage, String productName,
             getVerSpace(32.h),
             Row(
               children: [
-                getadd_remove_button("remove_icon.svg",
+                getAddRemoveButton("remove_icon.svg",
                     function: () {},
                     color: regularWhite,
                     padding: 5.h,
@@ -731,7 +733,7 @@ Widget getCartDetailFormate(String productImage, String productName,
                 getCustomFont("$productQuntity", 16, Color(0XFF000000), 1,
                     fontWeight: FontWeight.w500),
                 getHorSpace(20.h),
-                getadd_remove_button("add_icon.svg",
+                getAddRemoveButton("add_icon.svg",
                     function: () {},
                     color: regularWhite,
                     padding: 5.h,
@@ -902,7 +904,7 @@ Widget getEditProfileOptionFormate(bool suffixIconPosition,
               BoxShadow(
                   offset: Offset(0, 4),
                   blurRadius: 16,
-                  color: regularBlack.withOpacity(0.03))
+                  color: regularBlack.withAlpha((0.03 * 255).toInt()))
             ],
             color: regularWhite),
         child: TextFormField(
@@ -923,7 +925,7 @@ Widget getEditProfileOptionFormate(bool suffixIconPosition,
 }
 
 Widget getMyaddressFormate(
-    String addressPlace, String address, String MobileNumber) {
+    String addressPlace, String address, String mobileNumber) {
   return getCustomContainer(142.h, double.infinity,
       color: regularWhite,
       child: Padding(
@@ -950,7 +952,7 @@ Widget getMyaddressFormate(
                         fontWeight: FontWeight.w500, txtHeight: 1.5.h),
                     getVerSpace(5.h),
                     getMultilineCustomFont(
-                      MobileNumber,
+                      mobileNumber,
                       16.sp,
                       regularBlack,
                       fontWeight: FontWeight.w500,
@@ -1193,13 +1195,12 @@ Widget getSearchHistry(String histry) {
 Widget getNotificationFormate(
     int notificationNumber, String messege, String time) {
   return Container(
-
     decoration: BoxDecoration(
       color: regularWhite,
       boxShadow: [
         BoxShadow(
             offset: Offset(0, 4),
-            color: regularBlack.withOpacity(0.03),
+            color: regularBlack.withAlpha((0.03 * 255).toInt()),
             blurRadius: 16),
       ],
     ),

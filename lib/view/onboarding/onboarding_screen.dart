@@ -5,7 +5,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/onboarding_slider.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/home_main_screen.dart';
 import 'package:thuraya_app/view/onboarding/onbording_started_screen.dart';
 
@@ -94,6 +94,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           onboardingScreenController.onPageChange(value);
         },
         itemBuilder: (context, index) {
+          // ignore: avoid_print
           print(controller.initialPage);
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -116,7 +117,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         style: TextStyle(
                             color: Color(0XFF76974C),
                             fontSize: 34.sp,
-                            fontWeight: FontWeight. w700,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Gilroy'),
                       ),
                       TextSpan(

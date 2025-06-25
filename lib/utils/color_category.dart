@@ -16,7 +16,7 @@ Color regularWhite = "#FFFFFF".toColor();
 // Color tabbarBackground  = "#F6F6F6".toColor();
 // Color selectTabColor = "#819498".toColor();
 Color dividerColor = "#F1F1F1".toColor();
-Color animationbaseColor = Colors.grey.withOpacity(0.14);
+Color animationbaseColor = Colors.grey.withAlpha((0.14 * 255).toInt());
 Color animationhighLightColor = bgColor;
 
 extension ColorExtension on String {

@@ -5,7 +5,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/model/filter_sheet_data_model.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 
 import '../../../datafile/model_data.dart';
 

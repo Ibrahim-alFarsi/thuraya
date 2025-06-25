@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
 
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class SecurityScreen extends StatefulWidget {
   const SecurityScreen({super.key});
@@ -20,7 +20,8 @@ class _SecurityScreenState extends State<SecurityScreen> {
     return Scaffold(
         backgroundColor: regularWhite,
         body: SafeArea(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               color: regularWhite,
               child: getAppBar("Security", space: 115.w, function: () {

@@ -6,7 +6,7 @@ import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
 import 'package:thuraya_app/view/home/home_main_screen.dart';
 
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -50,8 +50,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                               getAssetImage("profile.png",
                                   height: 100.h, width: 100.w),
                               Padding(
-                                padding:
-                                    EdgeInsets.only(top: 82.h, left: 35.w),
+                                padding: EdgeInsets.only(top: 82.h, left: 35.w),
                                 child: getAssetImage("editProfileIcon.png",
                                     height: 30.h, width: 30.w),
                               ),

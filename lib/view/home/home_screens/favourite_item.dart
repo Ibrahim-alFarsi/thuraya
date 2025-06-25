@@ -6,7 +6,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import '../../../datafile/model_data.dart';
 import '../../../model/popular_plant.dart';
 import '../../../utils/color_category.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 import '../../item_category_class/plant_detail_screen.dart';
 
 class FavouriteItemScreen extends StatefulWidget {

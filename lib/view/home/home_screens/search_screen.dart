@@ -8,7 +8,7 @@ import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/search_data.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/home_screens/serch_filter_sheet.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -42,7 +42,8 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Column(
               children: [
                 getVerSpace(30.h),
-                getSearchField("Search...",fontweight: FontWeight.w500,
+                getSearchField("Search...",
+                    fontweight: FontWeight.w500,
                     function: () {
                       //Get.to(SearchScreen());
                     },
@@ -50,7 +51,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     suffixiconimage: "filterIcon.png",
                     suffixfunction: () {
                       showModalBottomSheet(
-                        backgroundColor: regularWhite,
+                          backgroundColor: regularWhite,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(22.h),
                           ),

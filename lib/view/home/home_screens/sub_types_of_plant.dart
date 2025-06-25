@@ -7,7 +7,7 @@ import '../../../controller/controller.dart';
 import '../../../datafile/model_data.dart';
 import '../../../model/plant_sub_types_model.dart';
 import '../../../utils/color_category.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class SubTypesOfPlant extends StatefulWidget {
   const SubTypesOfPlant({super.key});
@@ -35,9 +35,9 @@ class _SubTypesOfPlantState extends State<SubTypesOfPlant> {
         },
         child: Scaffold(
             body: SafeArea(
-              child: GetBuilder<SubtypesOfPlantScreenController>(
-          init: SubtypesOfPlantScreenController(),
-          builder: (subtypesOfPlantScreenController) => Column(
+          child: GetBuilder<SubtypesOfPlantScreenController>(
+            init: SubtypesOfPlantScreenController(),
+            builder: (subtypesOfPlantScreenController) => Column(
               children: [
                 Container(
                     height: 73.h,
@@ -69,9 +69,9 @@ class _SubTypesOfPlantState extends State<SubTypesOfPlant> {
                   ),
                 ))
               ],
+            ),
           ),
-        ),
-            )));
+        )));
   }
 
   Widget subTypesList() {

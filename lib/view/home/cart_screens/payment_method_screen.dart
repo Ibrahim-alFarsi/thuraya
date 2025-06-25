@@ -6,7 +6,7 @@ import 'package:thuraya_app/controller/controller.dart';
 import 'package:thuraya_app/model/payment_method_model.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/cart_screens/My_cart_before_payment.dart';
 import '../../../datafile/model_data.dart';
 
@@ -45,7 +45,6 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       }, space: 71.w),
                     ),
                     getVerSpace(40.h),
-
                     buildProgressWidget(context),
                     getVerSpace(30.h),
                     Padding(
@@ -56,7 +55,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                           Color(0XFF000000),
                           1,
                           fontWeight: FontWeight.w500,
-                      txtHeight: 1.5.h),
+                          txtHeight: 1.5.h),
                     ),
                     getVerSpace(10.h),
                     Expanded(
@@ -65,10 +64,12 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                         itemCount: paymentOption.length,
                         itemBuilder: (BuildContext context, int index) {
                           return GestureDetector(
-                            onTap: (){
-                              paymentMethodScreenController.onSetCheakPosition(index);
+                            onTap: () {
+                              paymentMethodScreenController
+                                  .onSetCheakPosition(index);
                             },
-                            child: getCustomContainer(84.h, double.infinity,color: regularWhite,
+                            child: getCustomContainer(84.h, double.infinity,
+                                color: regularWhite,
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -80,29 +81,46 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                                             height: 34.h,
                                             width: 34.w),
                                         getHorSpace(20.w),
-                                        paymentOption[index].type=='card'?  Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            getCustomFont(
+                                        paymentOption[index].type == 'card'
+                                            ? Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  getCustomFont(
+                                                      paymentOption[index]
+                                                          .name!,
+                                                      16,
+                                                      Color(0XFF000000),
+                                                      1,
+                                                      fontWeight:
+                                                          FontWeight.w700),
+                                                  getCustomFont(
+                                                      "xxxx xxxx xxxx 5416",
+                                                      16.sp,
+                                                      regularBlack,
+                                                      1,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      txtHeight: 1.5.h)
+                                                ],
+                                              )
+                                            : getCustomFont(
                                                 paymentOption[index].name!,
                                                 16,
                                                 Color(0XFF000000),
                                                 1,
                                                 fontWeight: FontWeight.w700),
-                                            getCustomFont("xxxx xxxx xxxx 5416", 16.sp, regularBlack, 1,fontWeight: FontWeight.w500,txtHeight: 1.5.h)
-                                          ],
-                                        ):getCustomFont(
-                                            paymentOption[index].name!,
-                                            16,
-                                            Color(0XFF000000),
-                                            1,
-                                            fontWeight: FontWeight.w700),
                                       ],
                                     ),
                                     paymentMethodScreenController
-                                        .cheakPosition ==
-                                        index?getSvgImage("radio_fill.svg",height: 24.h,width: 24.h):getSvgImage("radio_button.svg",height: 24.h,width: 24.h)
+                                                .cheakPosition ==
+                                            index
+                                        ? getSvgImage("radio_fill.svg",
+                                            height: 24.h, width: 24.h)
+                                        : getSvgImage("radio_button.svg",
+                                            height: 24.h, width: 24.h)
                                   ],
                                 ).paddingSymmetric(horizontal: 20.h)),
                           ).paddingSymmetric(vertical: 10.h);
@@ -141,7 +159,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
   Widget buildProgressWidget(BuildContext context) {
     return Row(
       children: [
-        getSvgImage( "location_fill.svg", height: 24.h,width: 24.h),
+        getSvgImage("location_fill.svg", height: 24.h, width: 24.h),
         Expanded(
           child: FDottedLine(
             color: buttonColor,
@@ -154,7 +172,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
             child: Container(),
           ).paddingSymmetric(horizontal: 6.h),
         ),
-        getSvgImage( "card.svg", height: 24.h,width: 24.h),
+        getSvgImage("card.svg", height: 24.h, width: 24.h),
         Expanded(
           child: FDottedLine(
             color: regularBlack,
@@ -167,7 +185,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
             child: Container(),
           ).paddingSymmetric(horizontal: 6.h),
         ),
-        getSvgImage( "check_circle.svg", height: 24.h,width: 24.h),
+        getSvgImage("check_circle.svg", height: 24.h, width: 24.h),
       ],
     ).paddingSymmetric(horizontal: 30.h);
   }

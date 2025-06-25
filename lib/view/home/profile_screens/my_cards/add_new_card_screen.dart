@@ -8,7 +8,7 @@ import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/payment_method_model.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/cart_screens/add_new_card_bottom_sheet.dart';
 
 class AddNewCards extends StatefulWidget {
@@ -72,8 +72,7 @@ class _AddNewCardsState extends State<AddNewCards> {
                                     )
                                   ]),
                               child: Padding(
-                                padding:
-                                    EdgeInsets.symmetric(horizontal: 20.w),
+                                padding: EdgeInsets.symmetric(horizontal: 20.w),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
@@ -101,129 +100,133 @@ class _AddNewCardsState extends State<AddNewCards> {
                                             "more_vert_rounded.png",
                                             height: 24.h,
                                             width: 24.w),
-                                        itemBuilder: (BuildContext context) =>
-                                            <PopupMenuEntry>[
-                                              PopupMenuItem(
-                                                value: 1,
-                                                child: GestureDetector(
-                                                  onTap: () {},
-                                                  child: Text(
-                                                    'Edit',
-                                                    style: TextStyle(
-                                                      fontSize: 15.sp,
-                                                      fontFamily: 'Gilroy',
-                                                      color:
-                                                          Color(0XFF000000),
-                                                      fontWeight:
-                                                          FontWeight.w600,
+                                        itemBuilder:
+                                            (BuildContext context) =>
+                                                <PopupMenuEntry>[
+                                                  PopupMenuItem(
+                                                    value: 1,
+                                                    child: GestureDetector(
+                                                      onTap: () {},
+                                                      child: Text(
+                                                        'Edit',
+                                                        style: TextStyle(
+                                                          fontSize: 15.sp,
+                                                          fontFamily: 'Gilroy',
+                                                          color:
+                                                              Color(0XFF000000),
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                              ),
-                                              PopupMenuItem(
-                                                value: 2,
-                                                child: GestureDetector(
-                                                  onTap: () {
-                                                    Get.defaultDialog(
-                                                        title: '',
-                                                        content: Padding(
-                                                          padding:
-                                                              const EdgeInsets
+                                                  PopupMenuItem(
+                                                    value: 2,
+                                                    child: GestureDetector(
+                                                      onTap: () {
+                                                        Get.defaultDialog(
+                                                            title: '',
+                                                            content: Padding(
+                                                              padding:
+                                                                  const EdgeInsets
                                                                       .only(
-                                                                  left: 15,
-                                                                  right: 15),
-                                                          child: Column(
-                                                            children: [
-                                                              Text(
-                                                                "Are you sure you want to delete card!",
-                                                                style:
-                                                                    TextStyle(
-                                                                  fontFamily:
-                                                                      'Gilroy',
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  color: Color(
-                                                                      0XFF000000),
-                                                                  fontSize:
-                                                                      24.sp,
-                                                                ),
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
+                                                                      left: 15,
+                                                                      right:
+                                                                          15),
+                                                              child: Column(
+                                                                children: [
+                                                                  Text(
+                                                                    "Are you sure you want to delete card!",
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontFamily:
+                                                                          'Gilroy',
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w600,
+                                                                      color: Color(
+                                                                          0XFF000000),
+                                                                      fontSize:
+                                                                          24.sp,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                  ),
+                                                                  Padding(
+                                                                    padding: EdgeInsets.only(
+                                                                        top: 30
+                                                                            .h,
+                                                                        bottom:
+                                                                            10.h),
+                                                                    child: Row(
+                                                                      children: [
+                                                                        Expanded(
+                                                                            child:
+                                                                                Container(
+                                                                          height:
+                                                                              56.h,
+                                                                          width: double
+                                                                              .infinity
+                                                                              .w,
+                                                                          decoration:
+                                                                              BoxDecoration(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(22.h),
+                                                                            color:
+                                                                                const Color(0XFF23408F),
+                                                                          ),
+                                                                          child: Center(
+                                                                              child: Text(
+                                                                            "Yes",
+                                                                            style: TextStyle(
+                                                                                fontFamily: 'Gilroy',
+                                                                                fontWeight: FontWeight.w700,
+                                                                                color: const Color(0XFFFFFFFF),
+                                                                                fontStyle: FontStyle.normal,
+                                                                                fontSize: 18.sp),
+                                                                          )),
+                                                                        )),
+                                                                        SizedBox(
+                                                                            width:
+                                                                                10.w),
+                                                                        Expanded(
+                                                                            child: Container(
+                                                                                height: 56.h,
+                                                                                width: double.infinity.w,
+                                                                                decoration: BoxDecoration(
+                                                                                  border: Border.all(
+                                                                                    color: const Color(0xFF23408F),
+                                                                                    style: BorderStyle.solid,
+                                                                                    width: 1.0.w,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(22.h),
+                                                                                ),
+                                                                                child: Center(
+                                                                                    child: Text(
+                                                                                  "No",
+                                                                                  style: TextStyle(fontFamily: 'Gilroy', fontWeight: FontWeight.w700, color: Color(0xFF23408F), fontSize: 18.sp),
+                                                                                ))))
+                                                                      ],
+                                                                    ),
+                                                                  )
+                                                                ],
                                                               ),
-                                                              Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    top: 30.h,
-                                                                    bottom:
-                                                                        10.h),
-                                                                child: Row(
-                                                                  children: [
-                                                                    Expanded(
-                                                                        child:
-                                                                            Container(
-                                                                      height:
-                                                                          56.h,
-                                                                      width: double
-                                                                          .infinity
-                                                                          .w,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(22.h),
-                                                                        color:
-                                                                            const Color(0XFF23408F),
-                                                                      ),
-                                                                      child: Center(
-                                                                          child: Text(
-                                                                        "Yes",
-                                                                        style: TextStyle(
-                                                                            fontFamily: 'Gilroy',
-                                                                            fontWeight: FontWeight.w700,
-                                                                            color: const Color(0XFFFFFFFF),
-                                                                            fontStyle: FontStyle.normal,
-                                                                            fontSize: 18.sp),
-                                                                      )),
-                                                                    )),
-                                                                    SizedBox(
-                                                                        width:
-                                                                            10.w),
-                                                                    Expanded(
-                                                                        child: Container(
-                                                                            height: 56.h,
-                                                                            width: double.infinity.w,
-                                                                            decoration: BoxDecoration(
-                                                                              border: Border.all(
-                                                                                color: const Color(0xFF23408F),
-                                                                                style: BorderStyle.solid,
-                                                                                width: 1.0.w,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(22.h),
-                                                                            ),
-                                                                            child: Center(
-                                                                                child: Text(
-                                                                              "No",
-                                                                              style: TextStyle(fontFamily: 'Gilroy', fontWeight: FontWeight.w700, color: Color(0xFF23408F), fontSize: 18.sp),
-                                                                            ))))
-                                                                  ],
-                                                                ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                        ));
-                                                  },
-                                                  child: Text('Delete',
-                                                      style: TextStyle(
-                                                        fontSize: 15.sp,
-                                                        fontFamily: 'Gilroy',
-                                                        color:
-                                                            Color(0XFF000000),
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                      )),
-                                                ),
-                                              ),
-                                            ]),
+                                                            ));
+                                                      },
+                                                      child: Text('Delete',
+                                                          style: TextStyle(
+                                                            fontSize: 15.sp,
+                                                            fontFamily:
+                                                                'Gilroy',
+                                                            color: Color(
+                                                                0XFF000000),
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          )),
+                                                    ),
+                                                  ),
+                                                ]),
                                   ],
                                 ),
                               )),

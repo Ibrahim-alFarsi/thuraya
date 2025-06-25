@@ -6,7 +6,7 @@ import 'package:shimmer/shimmer.dart';
 import '../../../datafile/model_data.dart';
 import '../../../model/blog_data_model.dart';
 import '../../../utils/color_category.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 import 'blog_detail_screen.dart';
 
 class BlogDataGrid extends StatefulWidget {

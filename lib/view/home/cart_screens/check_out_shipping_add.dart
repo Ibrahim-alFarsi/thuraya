@@ -4,14 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:thuraya_app/datafile/model_data.dart';
 import 'package:thuraya_app/model/address.dart';
-import 'package:thuraya_app/utils/constantWidget.dart';
+import 'package:thuraya_app/utils/constant_widget.dart';
 import 'package:thuraya_app/view/home/cart_screens/add_address_screen.dart';
 import 'package:thuraya_app/view/home/cart_screens/payment_method_screen.dart';
 import '../../../controller/controller.dart';
 import '../../../utils/color_category.dart';
-
-
-
 
 class CheckoutAddress extends StatefulWidget {
   const CheckoutAddress({super.key});
@@ -28,7 +25,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-      Get.back();
+        Get.back();
         return false;
       },
       child: Scaffold(
@@ -38,7 +35,11 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
             children: [
               Column(
                 children: [
-                  Container(color: regularWhite,child: getAppBar("Checkout",function: (){Get.back();})),
+                  Container(
+                      color: regularWhite,
+                      child: getAppBar("Checkout", function: () {
+                        Get.back();
+                      })),
                   // getToolbar(context, () {
                   //   backClick();
                   // },
@@ -71,31 +72,34 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
   }
 
   Widget buildNextButton(BuildContext context) {
-    return getCustomButton("Next", (){
+    return getCustomButton("Next", () {
       Get.to(PaymentMethodScreen());
-    }).paddingOnly(left: 20.h,right: 20.h,bottom: 40.h);
-
+    }).paddingOnly(left: 20.h, right: 20.h, bottom: 40.h);
   }
 
   Widget buildNewAddressButton(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         Get.to(AddAddressScreen());
       },
-      child: getCustomContainer(60.h, double.infinity,decoration: BoxDecoration(borderRadius: BorderRadius.circular(22.h),
-      color: dividerColor),child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          getSvgImage("add_icon.svg",color: regularBlack,height: 24.h,width: 24.h),
-          getHorSpace(12.h),
-          getCustomFont("Add New Address", 16.sp, regularBlack, 1,fontWeight: FontWeight.w500)
-        ],
-      )).paddingSymmetric(horizontal: 74.h),
+      child: getCustomContainer(60.h, double.infinity,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22.h), color: dividerColor),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              getSvgImage("add_icon.svg",
+                  color: regularBlack, height: 24.h, width: 24.h),
+              getHorSpace(12.h),
+              getCustomFont("Add New Address", 16.sp, regularBlack, 1,
+                  fontWeight: FontWeight.w500)
+            ],
+          )).paddingSymmetric(horizontal: 74.h),
     );
     //   getCustomButton("Add New Address",(){
     //   Get.to(AddAddressScreen());
     // });
-     /* getButton(context, widgetBg, "Add New Address", Colors.black, () {
+    /* getButton(context, widgetBg, "Add New Address", Colors.black, () {
       Constant.sendToNext(context, addAddressScreenRoute);
     }, 16.sp,
         buttonHeight: 60.h,
@@ -159,8 +163,8 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
                                       controller.addressIndex == index
                                           ? "radio_fill.svg"
                                           : "radio_button.svg",
-
-                                  height: 24.h,width: 24.h),
+                                      height: 24.h,
+                                      width: 24.h),
                                   init: CartController(),
                                 ),
                               )
@@ -169,7 +173,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
                           getVerSpace(20.h),
                           index == controller.addressLists.length - 1
                               ? SizedBox()
-                              : getDivider(color: dividerColor,horPadding: 0)
+                              : getDivider(color: dividerColor, horPadding: 0)
                         ],
                       ),
                     );
@@ -186,7 +190,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
   Widget buildProgressWidget(BuildContext context) {
     return Row(
       children: [
-        getSvgImage( "myAddressIcon.svg", height: 24.h,width: 24.h),
+        getSvgImage("myAddressIcon.svg", height: 24.h, width: 24.h),
         Expanded(
           child: FDottedLine(
             color: regularBlack,
@@ -199,7 +203,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
             child: Container(),
           ).paddingSymmetric(horizontal: 6.h),
         ),
-        getSvgImage( "card.svg", height: 24.h,width: 24.h),
+        getSvgImage("card.svg", height: 24.h, width: 24.h),
         Expanded(
           child: FDottedLine(
             color: regularBlack,
@@ -212,7 +216,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
             child: Container(),
           ).paddingSymmetric(horizontal: 6.h),
         ),
-        getSvgImage( "check_circle.svg", height: 24.h,width: 24.h),
+        getSvgImage("check_circle.svg", height: 24.h, width: 24.h),
       ],
     ).paddingSymmetric(horizontal: 30.h);
   }

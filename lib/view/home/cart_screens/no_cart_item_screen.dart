@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thuraya_app/utils/constant.dart';
 
 import '../../../utils/color_category.dart';
-import '../../../utils/constantWidget.dart';
+import '../../../utils/constant_widget.dart';
 
 class NoCartItemScreen extends StatefulWidget {
   const NoCartItemScreen({super.key});
