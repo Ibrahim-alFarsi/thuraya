@@ -28,3 +28,16 @@ void main() {
     expect(find.text('1'), findsOneWidget);
   });
 }
+
+
+// To update the code in the github, you have to do the following steps:
+// 0. git status
+// 1. git init 
+// 2. git add .
+// 3. git commit -m "Add Yout Comment Message"
+// 4. git push origin main [MOST IMPORTANT ONE]
+
+// And if you are using another device, use the following:
+// clone the repository
+// 1. git clone <repository_url>
+// 2. git pull origin main // Pull Latest Changes (if others work on the repo)
