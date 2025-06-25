@@ -28,10 +28,12 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        Get.back();
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (!didPop) {
+          Get.back();
+        }
       },
       child: Scaffold(
         backgroundColor: bgColor,
@@ -63,6 +65,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: getCustomButton("Save", () {
+                      //ignore: avoid_print
                       print(addressLists.length);
                       if (addressForm.currentState!.validate()) {
                         controller.addAddress(

@@ -43,7 +43,8 @@ void main() {
 // 2. git pull origin main // Pull Latest Changes (if others work on the repo)
 
 
-// If you want to completely overwrite local changes and match the remote repository exactly:
+// If you want to completely overwrite local changes and match the 
+// remote repository exactly:
 // git fetch origin
 // git reset --hard origin/main
 

@@ -42,7 +42,8 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(-14, 8),
-                        color: Color(0XFF181414).withOpacity(0.08),
+                        color: Color(0XFF181414)
+                            .withValues(alpha: (0.08 * 255).toDouble()),
                         blurRadius: 32,
                       ),
                     ],
@@ -58,7 +59,8 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(-14, 8),
-                        color: Color(0XFF181414).withOpacity(0.08),
+                        color: Color(0XFF181414)
+                            .withValues(alpha: (0.08 * 255).toDouble()),
                         blurRadius: 32,
                       ),
                     ],
@@ -76,7 +78,8 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(-14, 8),
-                          color: Color(0XFF181414).withOpacity(0.08),
+                          color: Color(0XFF181414)
+                              .withValues(alpha: (0.08 * 255).toDouble()),
                           blurRadius: 32,
                         ),
                       ],
@@ -96,7 +99,8 @@ class _CardBottomSheetState extends State<CardBottomSheet> {
                       boxShadow: [
                         BoxShadow(
                           offset: Offset(-14, 8),
-                          color: Color(0XFF181414).withOpacity(0.08),
+                          color: Color(0XFF181414)
+                              .withValues(alpha: (0.08 * 255).toDouble()),
                           blurRadius: 32,
                         ),
                       ],
