@@ -9,7 +9,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  //This is the main app, and I have added the
+  //comment for the first time
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
