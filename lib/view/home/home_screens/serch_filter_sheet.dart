@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:thuraya_app/controller/controller.dart';
-import 'package:thuraya_app/model/filterSheet_data_model.dart';
+import 'package:thuraya_app/model/filter_sheet_data_model.dart';
 import 'package:thuraya_app/utils/color_category.dart';
 import 'package:thuraya_app/utils/constant.dart';
 import 'package:thuraya_app/utils/constantWidget.dart';

@@ -1,6 +1,6 @@
 import 'package:thuraya_app/model/address.dart';
 import 'package:thuraya_app/model/blog_data_model.dart';
-import 'package:thuraya_app/model/filterSheet_data_model.dart';
+import 'package:thuraya_app/model/filter_sheet_data_model.dart';
 import 'package:thuraya_app/model/indoor_plant_data_model.dart';
 import 'package:thuraya_app/model/my_address_data.dart';
 import 'package:thuraya_app/model/my_cart_data.dart';
